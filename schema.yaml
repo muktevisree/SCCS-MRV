@@ -1,0 +1,41 @@
+# CCS–MRV Synthetic Dataset Schema (v1.0)
+version: 1.0
+license: CC BY 4.0
+description: >
+  Minimal CCS schema mapped to OSDU anchor entities (Well, Wellbore, Facility),
+  Open Footprint (Facility, Source, Activity, Measurement, Emission), and MRV standards
+  (EPA 40 CFR Part 98 Subpart RR, ISO 27916, OGMP 2.0).
+
+entities:
+  facility:
+    required: [facility_id, country_code, lat, lon]
+    properties:
+      facility_id: {type: string}
+      country_code: {type: string, pattern: "^[A-Z]{2,3}$"}
+      lat: {type: number, minimum: -90, maximum: 90}
+      lon: {type: number, minimum: -180, maximum: 180}
+      capture_tech: {type: string, enum: [MEA, MDEA, Selexol, PSA, TSA, Amine, Other]}
+      co2_captured_tonnes: {type: number, minimum: 0}
+      capture_energy_MWh: {type: number, minimum: 0}
+      ch4_emissions_tonnes: {type: number, minimum: 0}
+      ogmp_source_category: {type: string}
+  transport:
+    properties:
+      transport_mode: {type: string, enum: [Pipeline, Truck, Ship]}
+      pipeline_length_km: {type: number, minimum: 0}
+      transport_loss_tonnes: {type: number, minimum: 0}
+  injection_storage:
+    required: [well_id, injection_start_date, co2_injected_tonnes]
+    properties:
+      well_id: {type: string}
+      injection_start_date: {type: string, format: date}
+      injection_end_date: {type: string, format: date}
+      co2_injected_tonnes: {type: number, minimum: 0}
+      co2_produced_tonnes: {type: number, minimum: 0}
+      co2_net_stored_tonnes: {type: number, minimum: 0}
+      reservoir_type: {type: string, enum: [Saline aquifer, Depleted gas field, Basalt, Other]}
+      avg_reservoir_pressure_MPa: {type: number, minimum: 0}
+      avg_reservoir_temp_C: {type: number}
+      mmv_methods: {type: string}
+      leak_events_count: {type: integer, minimum: 0}
+      leak_mass_tonnes: {type: number, minimum: 0}

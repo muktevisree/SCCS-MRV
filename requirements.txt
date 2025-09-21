@@ -1,0 +1,6 @@
+numpy
+pandas
+faker
+geopy
+scipy
+matplotlib

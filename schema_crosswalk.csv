@@ -1,0 +1,25 @@
+field,osdu_anchor_entity,ofp_concept,mrv_reference
+facility_id,Facility (OSDU),OFP:Facility,NA
+country_code,Facility,OFP:Geography,NA
+lat,Facility/Well,OFP:Geography,NA
+lon,Facility/Well,OFP:Geography,NA
+capture_tech,Facility,OFP:Activity:Process,ISO 27916 scope
+co2_captured_tonnes,Facility,OFP:Quantity (CO2 mass),EPA Subpart RR
+capture_energy_MWh,Facility/Energy,OFP:Consumption:Energy,NA
+transport_mode,Pipeline,OFP:Logistics,NA
+pipeline_length_km,Pipeline,OFP:AssetAttribute,NA
+transport_loss_tonnes,Pipeline,OFP:Emission:Fugitive,ISO 27916 mass balance
+well_id,Well/Wellbore,OFP:Source (well),EPA Subpart RR
+injection_start_date,Wellbore Operation,OFP:ActivityPeriod,EPA Subpart RR
+injection_end_date,Wellbore Operation,OFP:ActivityPeriod,EPA Subpart RR
+co2_injected_tonnes,Wellbore Operation,OFP:Quantity (CO2 mass),EPA Subpart RR
+co2_produced_tonnes,Storage Site,OFP:Quantity (CO2 mass),EPA Subpart RR
+co2_net_stored_tonnes,Storage Site,OFP:CalculatedValue,EPA Subpart RR
+reservoir_type,Storage Facility,OFP:AssetAttribute,NA
+avg_reservoir_pressure_MPa,Reservoir/Wellbore,OFP:Measurement,NA
+avg_reservoir_temp_C,Reservoir/Wellbore,OFP:Measurement,NA
+mmv_methods,Storage Site,OFP:Method,EPA Subpart RR MRV Plan
+leak_events_count,Storage Site,OFP:Event,EPA Subpart RR
+leak_mass_tonnes,Storage Site,OFP:Emission:Leakage,EPA Subpart RR
+ch4_emissions_tonnes,Facility/Equipment,OFP:Emission:CH4,OGMP 2.0
+ogmp_source_category,Facility/Equipment,OFP:Category,OGMP 2.0

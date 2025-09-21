@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: "SCCS–MRV Synthetic Dataset (v1.0)"
+doi: 10.5281/zenodo.17003094
+version: "1.0"
+authors:
+  - family-names: Muktevi
+    given-names: Sreekanth
+    orcid: "https://orcid.org/0009-0007-8116-3176"
+  - family-names: Nagpal
+    given-names: Yogesh
+  - family-names: Thotakura
+    given-names: Rajesh Leela
+  - family-names: Muktevi
+    given-names: Jyotsna
+date-released: 2025-09-21
+license: CC-BY-4.0
+repository-code: "https://github.com/muktevisree/SCCS-MRV"
