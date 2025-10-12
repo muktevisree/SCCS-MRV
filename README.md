@@ -10,6 +10,21 @@ This repository hosts the **Synthetic CCS–MRV Dataset (v1.0)** aligned with:
 
 The dataset provides synthetic but realistic CCS records (annual, monthly, daily) for research, standards testing, and ESG reporting.
 
+
+## OSDU Schema Alignment (2025 Standard)
+Aligned with **OSDU Data Definitions (The Open Group, 2025)**.  
+Legacy *WKE* terminology replaced by standardized *WKS* identifiers.
+
+| Schema Group | Entity | Identifier |
+|---------------|---------|------------|
+| Master Data | Facility | `WKS:master-data--Facility:1.0.0` |
+| Master Data | Asset | `WKS:master-data--Asset:1.0.0` |
+| Master Data | Wellbore | `WKS:master-data--Wellbore:1.0.0` |
+| Work Product Component | Measurement | `WKS:work-product-component--Measurement:1.0.0` |
+| Work Product Component | ProductionData | `WKS:work-product-component--ProductionData:1.0.0` |
+| Work Product Component | EventMethod | `WKS:work-product-component--EventMethod:1.0.0` |
+| Extension (Proposed) | EnvironmentalData | `WKS:extension--EnvironmentalData:1.0.0` |
+
 ## Repository Contents
 - `data/ccs_full_dataset_v1.0.csv` – Facility-level annual summary
 - `data/ccs_injection_daily_v1.0.csv` – Daily injection timeseries
