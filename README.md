@@ -1,6 +1,6 @@
 # Synthetic CCS–MRV Dataset (SCCS-MRV) (v1.0)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17003094.svg)](https://doi.org/10.5281/zenodo.17003094)
+[[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17003094.svg)](https://doi.org/10.5281/zenodo.17003094)](https://doi.org/10.5281/zenodo.17330775)
 
 ## Overview
 This repository hosts the **Synthetic CCS–MRV Dataset (v1.0)** aligned with:
