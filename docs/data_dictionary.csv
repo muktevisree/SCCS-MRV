@@ -1,0 +1,25 @@
+Variable	Section	Type	Unit	Range	Allowed Values	Notes
+facility_id	facility	string				
+country_code	facility	string				
+lat	facility	number		-90 to 90		
+lon	facility	number		-180 to 180		
+capture_tech	facility	string			MEA, MDEA, Selexol, PSA, TSA, Amine, Other	
+co2_captured_tonnes	facility	number		0 to 		
+capture_energy_MWh	facility	number		0 to 		
+ch4_emissions_tonnes	facility	number		0 to 		
+ogmp_source_category	facility	string				
+transport_mode	transport	string			Pipeline, Truck, Ship	
+pipeline_length_km	transport	number		0 to 		
+transport_loss_tonnes	transport	number		0 to 		
+well_id	injection_storage	string				
+injection_start_date	injection_storage	string				
+injection_end_date	injection_storage	string				
+co2_injected_tonnes	injection_storage	number		0 to 		
+co2_produced_tonnes	injection_storage	number		0 to 		
+co2_net_stored_tonnes	injection_storage	number		0 to 		
+reservoir_type	injection_storage	string			Saline aquifer, Depleted gas field, Basalt, Other	
+avg_reservoir_pressure_MPa	injection_storage	number		0 to 		
+avg_reservoir_temp_C	injection_storage	number				
+mmv_methods	injection_storage	string				
+leak_events_count	injection_storage	integer		0 to 		
+leak_mass_tonnes	injection_storage	number		0 to 		
