@@ -1,0 +1,40 @@
+title: "Synthetic CCS–MRV Dataset for OFP–OSDU Integration in Carbon Storage Reporting"
+authors:
+  - name: Sreekanth Muktevi
+    affiliation: YASH Technologies
+    email: sreekanth.muktevi@yash.com
+  - name: Yogesh Nagpal
+    affiliation: YASH Technologies
+  - name: Leelarajesh Thalluri
+    affiliation: YASH Technologies
+  - name: Jyotsna Muktevi
+    affiliation: YASH Technologies
+license: CC-BY-4.0
+doi: 10.5281/zenodo.17451647
+version: '1.4'
+keywords:
+  - carbon capture
+  - synthetic data
+  - emissions
+  - OSDU
+  - Open Footprint
+  - CCS
+  - MRV
+  - energy transition
+temporal_coverage: 2023-01-01 to 2023-12-31
+spatial_coverage: Global synthetic dataset
+schema:
+  - file: sccs_schema.yaml
+    format: YAML
+    description: Defines field names, data types, units, rules, and validation logic
+validation:
+  - tool: CLI Validator (validate_ccs.py)
+    status: PASS
+    output_file: integrity_report.txt
+    description: Checksum and size report for MRV dataset files (CSV)
+repository:
+  url: https://github.com/muktevisree/SCCS-MRV
+  type: git
+diagram:
+  file: workflow_diagram.png
+  description: Illustrates how daily data is aggregated into monthly and annual views
