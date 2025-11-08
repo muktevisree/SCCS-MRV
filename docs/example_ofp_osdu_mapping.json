@@ -1,0 +1,70 @@
+{
+  "OFP_Record": {
+    "record_id": "R1",
+    "case_id": "CCS-A",
+    "facility_id": "PLANT-ALPHA",
+    "country_code": "US",
+    "lat": 31.5,
+    "lon": -102.0,
+    "capture_tech": "MEA",
+    "co2_captured_tonnes": 500000,
+    "capture_energy_MWh": 120000,
+    "transport_mode": "Pipeline",
+    "pipeline_length_km": 120.0,
+    "transport_loss_tonnes": 250.0,
+    "well_id": "WELL-INJ-001",
+    "injection_start_date": "2024-01-01",
+    "injection_end_date": "2024-12-31",
+    "co2_injected_tonnes": 498000.0,
+    "co2_produced_tonnes": 1000.0,
+    "co2_net_stored_tonnes": 496750.0,
+    "reservoir_type": "Saline aquifer",
+    "avg_reservoir_pressure_MPa": 18.2,
+    "avg_reservoir_temp_C": 58.0,
+    "mmv_methods": ["pressure", "4D seismic"],
+    "leak_events_count": 0,
+    "leak_mass_tonnes": 0.0,
+    "ch4_emissions_tonnes": 2.5,
+    "ogmp_source_category": "PR"
+  },
+  "OSDU_Mapping": {
+    "Facility": {
+      "id": "PLANT-ALPHA",
+      "location": {
+        "country": "US",
+        "coordinates": [31.5, -102.0]
+      },
+      "captureTechnology": "MEA",
+      "energyUsedMWh": 120000
+    },
+    "Transport": {
+      "mode": "Pipeline",
+      "length_km": 120.0,
+      "loss_tonnes": 250.0
+    },
+    "Wellbore": {
+      "id": "WELL-INJ-001",
+      "injectionPeriod": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "injectedCO2_tonnes": 498000.0,
+      "producedCO2_tonnes": 1000.0,
+      "netStoredCO2_tonnes": 496750.0,
+      "reservoir": {
+        "type": "Saline aquifer",
+        "avgPressure_MPa": 18.2,
+        "avgTemp_C": 58.0
+      }
+    },
+    "Monitoring": {
+      "mmvMethods": ["pressure", "4D seismic"],
+      "leakEvents": {
+        "count": 0,
+        "mass_tonnes": 0.0
+      },
+      "ch4Emissions_tonnes": 2.5,
+      "ogmpSourceCategory": "PR"
+    }
+  }
+}
