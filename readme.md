@@ -1,4 +1,4 @@
-# Synthetic CCS–MRV Dataset (SCCS-MRV) (v1.5)
+# Synthetic CCS–MRV Dataset (SCCS-MRV) (v1.5) - Latest 
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17003094.svg)](https://doi.org/10.5281/zenodo.17003094)
 
