@@ -1,23 +1,22 @@
+# Synthetic CCS–MRV Dataset (SCCS-MRV) (v1.5) - Latest 
 
-# Synthetic CCS–MRV Dataset (SCCS-MRV) (v1.3)
-
-[![DOI]https://doi.org/10.5281/zenodo.17330775
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17003094.svg)](https://doi.org/10.5281/zenodo.17003094)
 
 ## 📘 Overview
 
-This repository hosts the **Synthetic CCS–MRV Dataset (v1.3)** aligned with:
+This repository hosts the **Synthetic CCS–MRV Dataset (v1.5)**, a comprehensive and openly accessible dataset built to support carbon capture and storage (CCS) MRV (Monitoring, Reporting, Verification) workflows. It is aligned with:
 
-- **OSDU** Well/Facility/Measurement schema entities  
-- **Open Footprint (OFP)** models: Facility, Source, Activity, Emission  
-- **MRV standards**: EPA 40 CFR Part 98 Subpart RR, ISO 27916, OGMP 2.0  
+- **Open Footprint (OFP v1.0.2)** emissions and mass-balance model  
+- **Open Subsurface Data Universe (OSDU v3.0.1)** WKS entities: Facility, Wellbore, Measurement, etc.  
+- **CCS MRV standards** including EPA 40 CFR Part 98 Subpart RR, ISO 27916, and OGMP 2.0
 
-⚗️ It supports research, ESG reporting, and schema validation using realistic synthetic data across capture, transport, injection, leak simulation, QA, and export stages.
+💡 The dataset enables benchmarking, tool development, schema validation, synthetic modeling, and academic training related to CCS.
 
 ---
 
-## 🧭 OSDU Schema Alignment (2025 Standard)
+## 🧭 OSDU Schema Alignment
 
-Aligned with the **OSDU Well-Known Schemas (WKS)** — legacy WKE identifiers are updated to reflect the 2025 standard:
+Updated to the 2025 schema standards:
 
 | Group                  | Entity             | WKS ID                                         |
 |------------------------|--------------------|------------------------------------------------|
@@ -31,36 +30,62 @@ Aligned with the **OSDU Well-Known Schemas (WKS)** — legacy WKE identifiers ar
 
 ---
 
-## 📂 Repository Structure
-
-```
+## 📦 Repository Structure
 📦 SCCS-MRV/
-├── 📁 schema/                     
-│   ├── schema.yaml
-│   ├── schema.json
-│   └── schema_crosswalk.csv
+├── 📁 schema/
+│   ├── schema.yaml                     # Unified data dictionary
+│   ├── schema.json                     # JSON schema for validation
+│   └── schema_crosswalk.csv           # Field mapping to OFP/OSDU standards
 ├── 📁 docs/
 │   ├── data_dictionary.csv
-│   ├── repo_structure.png
-│   └── workflow_diagram.png
+│   ├── repo_structure.png             # Figure 2 – Repository layout
+│   ├── workflow_diagram.png           # Figure 3 – Data aggregation logic
+│   └── example_payload.json           # Sample OFP–OSDU JSON payload
 ├── 📄 ccs_full_dataset_v1.0.csv
 ├── 📄 ccs_injection_daily_v1.0.csv
 ├── 📄 ccs_injection_monthly_v1.0.csv
 ├── 📄 SCCS_MRV_dataset_whitepaper.pdf
-├── 📄 example.ipynb
+├── 📄 example.ipynb                   # Jupyter notebook: regeneration & validation
 ├── 📄 requirements.txt
 ├── 📄 Dockerfile
-├── 📄 LICENSE (CC BY 4.0)
+├── 📄 LICENSE                         # CC-BY 4.0 License
 ├── 📄 CITATION.cff
 ├── 📄 README.md
 └── 📄 NOTES.md
-```
 
 ---
 
 ## 🔁 Workflow
 
 ![Workflow Diagram](docs/workflow_diagram.png)
+
+Synthetic records simulate CO₂ capture, transport, injection, and monitoring across 10 facilities using deterministic logic and schema-aligned formats. Reuse scenarios include:
+
+- Digital twin simulation
+- ESG platform testing
+- Schema validator development
+- Academic education
+
+---
+
+## 📊 Record Summary
+
+| File                         | Records × Fields  | Notes                                 |
+|-----------------------------|-------------------|----------------------------------------|
+| ccs_full_dataset_v1.0.csv   | 10 × 26           | Facility-level annual summaries        |
+| ccs_injection_daily_v1.0.csv| 3,660 × 4         | Daily injection and monitoring         |
+| ccs_injection_monthly_v1.0.csv | 120 × 3        | Monthly aggregations with leak data   |
+
+---
+
+## ⚙️ Reproducibility
+
+- ✅ Fixed random seed (42) for deterministic generation  
+- ✅ Unified schema and codebook (`schema.yaml`)  
+- ✅ Validation logs, checksum report (`integrity_report.txt`)  
+- ✅ Dockerfile for containerized execution  
+- ✅ Machine-readable metadata (`ccs_dataset-metadata.yaml`)  
+- ✅ Jupyter notebook includes regeneration, validation, and schema-aligned OFP/OSDU export examples
 
 ---
 
@@ -74,20 +99,23 @@ Distributed under the [Creative Commons Attribution 4.0 License](LICENSE).
 
 Please cite this dataset as:
 
-```
-Muktevi, Sreekanth (2025). SCCS–MRV Synthetic Dataset v1.3. Zenodo. https://doi.org/10.5281/zenodo.17003094
-```
+```bibtex
+@dataset{muktevi_sccs_mrv_2025,
+  author       = {Sreekanth Muktevi and Yogesh Nagpal and Rajesh Leela Thotakura and Jyotsna Muktevi},
+  title        = {SCCS–MRV Synthetic Dataset (v1.5)},
+  year         = 2025,
+  doi          = {10.5281/zenodo.17003094},
+  publisher    = {Zenodo},
+  url          = {https://doi.org/10.5281/zenodo.17003094}
+}
+
+🧪 Related Projects
+	•	SGED-OFPOSDU: Synthetic GHG Dataset￼
+	•	SUHS-OFPOSDU: Underground Hydrogen Storage￼
+	•	SynData-ESG Toolkit (GitHub)￼
 
 ---
 
-## ✨ Acknowledgments
+🙌 Acknowledgments
 
-Created as part of the **SynData-ESG Toolkit** to support open-source ESG data generation and validation for net-zero energy systems.
-
----
-
-## 🧪 Related Projects
-
-- [SGED-OFPOSDU: GHG Dataset](https://zenodo.org/record/17003443)
-- [SUHS-OFPOSDU: Hydrogen Storage Dataset](https://zenodo.org/record/17002213)
-- [SynData-ESG Toolkit GitHub](https://github.com/muktevisree/SynData-ESG-Toolkit)
+This dataset was developed as part of the SynData-ESG Toolkit initiative. It supports ESG disclosure innovation, schema interoperability, and digital net-zero platform enablement.
